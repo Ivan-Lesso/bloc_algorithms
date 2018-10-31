@@ -1,0 +1,43 @@
+> Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee:
+
+* Step 1: Put coffee into a coffee machine
+* Step 2: Fill in the coffee machine with water
+* Step 3: Press start button
+* Step 4: Pour coffee into a cup
+* Goal achieved: coffee in a cup
+* Finite amount of time: check (lol)
+
+Washing dishes:
+* Step 1: Put dirty dishes into a dish washing machine
+* Step 2: Put a dish detergent into a washing machine
+* Step 3: Start a dish washing machine
+* Step 4: Sort out cleaned dishes
+* Goal achieved: dishes cleaned
+* Finite amount of time: check
+
+Completing Bloc checkpoint:
+* Step 1: Read checkpoint content
+* Step 2: Go to the assignment
+* Step 3: Create new branch
+* Step 4: Do the assignment
+* Step 5: Test it (go to step 4 if it doesn't work)
+* Step 6 (only if Step 5 is a success): Merge the branch with master
+* Step 7: Push master to origin (Github)
+* Step 8: Submit
+* Step 9: Repeat steps 4 - 8 if revision requested, if approved, go to the next step
+* Step 10: Enjoy your evening
+* Goal achieved: checkpoint completed
+* Finite amount of time: check (well...true unless the assignment could be impossible to complete?)
+
+> Three companies
+
+Facebook - graph search
+Amazon - inventory distribution
+Uber - driver <> rider matching
+
+> Efficient vs. inefficient
+
+Efficient -> takes fewer steps to get to a goal. Inefficient -> takes more steps.
+As a result, an efficient one takes less hardware power and less time to complete.
