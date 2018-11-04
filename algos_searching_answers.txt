@@ -1,0 +1,53 @@
+> What is a real-life scenario that uses linear search?
+
+When you can't sort the list. Example is random data that we for some reason can't sort.
+
+> What is a real-life scenario that uses binary search?
+
+A binary search could be a list of numbers between 1 and 100 that we could sort.
+
+> Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using linear search?
+
+7
+
+> Given the alphabetically sorted collection in this checkpoint, how many iterations would it take to find the value G using binary search?
+
+3
+
+> Given an unsorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Linear search because we can't sort the list so binary search wouldn't be an option.
+
+> Given a sorted collection of a million items, which algorithm would you choose between linear search and binary search? Explain your reasoning.
+
+Binary search because it will take fewer steps (due to sorting).
+
+> You and a friend have set a wager to see who can find the word "Albatross" in the dictionary the fastest. Write a program to allow you to win the bet.
+
+let existsUsingBinarySearch = (list, value) => {
+  let start = 0;
+  let stop = list.length-1;
+  let mid = Math.floor(list.length/2)-1;
+
+  while(start!==mid) {
+    //console.log(start + " - " + mid + " - " + stop)
+    let oldStart = start;
+    start = mid;
+    mid = oldStart + Math.floor((stop - mid)/2);
+
+    if(list[mid]===value) return true;
+
+  }
+  return false;
+};
+
+> You work at a pet store, and a child has asked you to net the only white-spotted goldfish from the fish tank. Write a program that will help you net the right fish.
+let searchValue = value;
+let found = 0;
+list.forEach((item) => {
+  console.log(item);
+  console.log(searchValue);
+  if(item === searchValue) { found = true; return true; }
+});
+return found;
+};
