@@ -1,0 +1,71 @@
+> Define and compare recursion and iteration.
+
+Recursion - repeatedly calling the function itself until some conditions are met
+Iteration - using a loop to repeat operations without calling the function itself
+
+> Name five algorithms that are commonly implemented by recursion.
+
+Factorial, fibonacci, maximum, minimum, average
+
+> When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+Recursion should be used when you want your program to walk on a path wit a set guideline on when it should stop. Example: walking down the tree of nodes.
+
+Recursion should be avoided if there is a chance when your function will never meet its base case. Example: walking down the tree of nodes that are circular.
+
+> Comparison:
+
+**Factorial**
+Similarities: both have the same if statements for cases where number is 0 or 1.
+The factorial logic is also the same - both functions end when the number equals to 1.
+Differences: the recursive function calls itself for every number - 1 and multiplies by the number until the number reaches 1.
+the iterative function ends when the loop ends (at 1).
+
+**Maximum**
+
+Similarities: each function goes through the numbers in the array and compares every number to one another.
+Differences: the iterative function starts with the first number and keeps a running variable of the maximum. If the next number is larger than the running maximum, it reassigns the running maximum to it.
+the recursion function goes through an array - every element every single time by calling itself.
+
+**Fibonacci**
+Similarities: not much other than both complete the fibonacci algorithm.
+Differences: the iterative function stops when the loop ends at number. The recursion stops when number is 1 or 2.
+The recursion function starts goes back, the iterative function goes up.
+
+> Given a multi-dimensional collection (such as an array) where the number of
+dimensions is unknown, write a recursive algorithm to count the number of items
+in the entire collection.
+
+let countArray = (numbers, currentCount) => {
+  if(numbers.length===1) {
+    currentCount = currentCount + 1;
+    return currentCount;
+  }
+  else if(numbers.length>1) {
+    currentCount = currentCount + 1;
+    numbers.pop();
+    return countArray(numbers, currentCount);
+  }
+  else {
+    return currentCount;
+  }
+
+}
+
+> A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar).
+Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+let isPalindrome = (stringValue) => {
+    if(stringValue.length === 0 || stringValue.length === 1) {
+        return true;
+    }
+
+    if (stringValue[0] === stringValue[stringValue.length - 1]) {
+        return isPalindrome(stringValue.slice(1, stringValue.length - 1));
+    }
+    else return false;
+};
+
+> Google Behavior:
+
+Recursion means repeating something or doing something multiple number of times so that's why Google is doing it with the search of "Recursion"
