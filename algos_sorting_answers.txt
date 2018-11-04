@@ -1,0 +1,50 @@
+> Write pseudocode for bubble sort.
+
+FUNCTION bubbleSort(array)
+
+FOR EACH ELEMENT IN ARRAY AS ELEMENT1
+  FOR EACH ELEMENT IN ARRAY AS ELEMENT2
+    IF ELEMENT2 < NEXT ELEMENT AFTER ELEMENT2
+      SET OLD_ELEMENT to NEXT ELEMENT AFTER ELEMENT2
+      SET NEXT ELEMENT AFTER ELEMENT2 to ELEMENT2
+      SET ELEMENT2 to OLD_ELEMENT
+    END IF
+  END FOR
+END FOR
+
+END FUNCTION
+
+> Write pseudocode for quicksort.
+
+FUNCTION quickSort(array)
+
+SET PIVOTPOINT to LAST ELEMENT of array
+
+FOR EACH ELEMENT IN array EXCEPT LAST
+  IF ELEMENT > PIVOTPOINT
+    TAKE OUT ELEMENT FROM array AND SET IT TO TEMP
+    ADD TEMP TO END OF array
+    REINDEX
+  END IF
+END FOR
+
+IF LENGTH OF ARRAY DOES NOT EQUAL TO 3 THEN
+  CALL quickSort(PORTION OF ARRAY UNTIL PIVOTPOINT) RETURNING SortedArray1
+  CALL quickSort(PORTION OF ARRAY FROM PIVOTPOINT UNTIL END) RETURNING SortedArray2
+END IF
+
+RETURN CONCATENATED SortedArray1, PIVOTPOINT, SortedArray2
+
+END FUNCTION
+
+> We talked about time complexity in a previous checkpoint, and how to get an idea of the efficiency of an algorithm. After looking at the pseudocode for the above sorting methods, identify why merge sort and quick sort are much more efficient than the others. Walking through each algorithm with a few sample collections may help.
+
+Because they take fewer steps and as a result, if we were to calculated the time complexity, it would be lower than others.
+
+> All of the sorts addressed in this checkpoint are known as comparison sorts. Research bucket sort and explain how it works. What is the ideal input for bucket sort?
+
+Bucket sort, or bin sort, is a sorting algorithm that works by distributing the elements of
+an array into a number of buckets. Each bucket is then sorted individually, either using a
+different sorting algorithm, or by recursively applying the bucket sorting algorithm.
+
+Best input is a uniform distribution.
